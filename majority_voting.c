@@ -82,12 +82,12 @@ int main(){
                     noVotes++;//increase the NO vote counter
                 }
             }
-            printf("Judge: YES votes = %d\n", yesVotes);//display the total number of YES votes
-            printf("Judge: NO votes = %d\n", noVotes);//display the total number of NO votes
-            if(yesVotes > noVotes){//check whether YES received more votes than NO
-                printf("Judge Decision: YES wins!\n");//announce YES as the majority decision
-            }else if(noVotes > yesVotes){//check whether NO received more votes than YES
-                printf("Judge Decision: NO wins!\n");//announce NO as the majority decision
+            printf("Judge: YES votes = %d\n", yesVotes);//display the total number of yes votes
+            printf("Judge: NO votes = %d\n", noVotes);//display the total number of no votes
+            if(yesVotes > noVotes){//check whether YES received more votes than no
+                printf("Judge Decision: YES wins!\n");//announce yes as the majority decision
+            }else if(noVotes > yesVotes){//check whether no received more votes than yes
+                printf("Judge Decision: NO wins!\n");//announce no as the majority decision
             }else{//if both totals are equal then announce a tie
                 printf("Judge Decision: TIE!\n");
             }
@@ -109,7 +109,7 @@ int main(){
             }
         }
     }
-     //all voting rounds have now been completed
+    //all voting rounds have now been completed
     if(voterID == -1){//check whether this process is the judge
         for(int i = 0; i < numVoters; i++){//judge closes the read ends of all pipes
             close(pipes[i][0]);//close the read end of the current pipe
